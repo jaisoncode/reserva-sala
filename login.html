@@ -18,19 +18,20 @@
             margin: 0;
         }
         .container {
-            background: linear-gradient(to bottom, #055372, #84dcff);
+            background: linear-gradient(to bottom, #0258FF, #66b9da);
             width: 50%;
             padding: 80px;
-            border-radius: 5px;
+            border-radius: 15px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         h1 {
-           
+            padding-top: 10px;
             color: #ffffff;
             
         }
         h4{
             color: #ffffff;
+            padding: 10px;
         }
         input[type="text"], input[type="password"] {
             width: 100%;
@@ -43,7 +44,7 @@
         .input-icon {
             position: relative;
         }
-
+        
         .input-icon i {
             position: absolute;
             top: 22px;
@@ -51,7 +52,7 @@
             color: #879196;
         }
         button {
-            background-color: #187ae2;
+            background-color: #0258FF;
             color: #fff;
             margin-top: 20px;
             width: 100%;
@@ -60,17 +61,23 @@
             border-radius: 4px;
             cursor: pointer;
             font-size: large;
-
+            
         }
         button:hover {
-            background-color: #21629b;
+            background-color: #0244c7;
         } 
+        #logo {
+            font-size: 4rem;
+            font-weight: 900;
+            
+        }
     </style>
 </head>
 <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
+    
     <div class="container">
+        <h1 id="logo">Logo</h1>
         <h1>Bem-vindo(a)!</h1><br><br>
         <h4>Seu gerenciador de salas favorito!</h4>
         <form id="loginForm">
@@ -86,16 +93,16 @@
             <br>
             <button class="btn-lg" type="submit">Entrar</button>
         </form>
-     </div>
-
+    </div>
+    
     <script>
         document.getElementById("loginForm").addEventListener("submit", function(event) {
             event.preventDefault();
-
+            
             // Obtenha os valores dos campos de entrada
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
-
+            
             // Simule uma verificação de login (substitua isso por sua lógica de autenticação real)
             if (username === "usuario" && password === "senha") {
                 alert("Login bem-sucedido!");
