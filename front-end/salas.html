@@ -40,8 +40,6 @@
 
   <main class="main-bg-body">
 
-
-
     <section class="section-search">
       <div class="search-content">
         <i class='bx bx-search search-icon'></i>
@@ -50,7 +48,7 @@
         <button id="openModalBtn" class="button-add" type="button"><i class='bx bx-plus-medical'></i>NOVO</button>
       </div>
 
-      <!-- Modal -->
+      <!-- Modal de fomulário de salas INICIO-->
       <div id="cad-sala-modal" class="modal">
         <div class="modal-content">
           <div class="titulo-modal">
@@ -80,11 +78,49 @@
             <input type="text" id="piso" name="piso" placeholder="Ex: Térreo" required>
 
             <button class="finalzar-btn" type="submit">Finalizar</button>
+            
           </form>
 
 
         </div>
       </div>
+      <!-- Modal de fomulário de salas FINAL-->
+
+      <!-- Modal de confimação de cadastro INICIO-->
+      <div id="modal-confirm-cadastro" class="content-modal-confirm" style="display: none;"">
+
+        <div class="modal-confirm">
+          <div class="content-dialog">
+            <i class='bx bx-message-rounded-check'></i>
+            <p>Essa ação irá adicionar uma sala na lista! Tem certeza?</p>
+            <div class="content-dialog-btn">
+              <button class="dialog-btn-cancelar" type="submit">Cancelar</button>
+              <button class="dialog-btn-sim" type="submit">Sim</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Modal de confimação de cadastro FINAL-->
+
+      <!-- Modal de confimação de DELETAR SALA INICIO-->
+      <div id="modal-confirm-deletar" class="content-modal-confirm" style="display: none;">
+
+        <div class="modal-confirm">
+          <div class="content-dialog">
+            <i class='bx bx-message-rounded-x delete'></i>
+            <p>Essa ação irá apagar uma sala na lista! Tem certeza?</p>
+            <div class="content-dialog-btn">
+              <button class="dialog-btn-cancelar" type="submit">Cancelar</button>
+              <button class="dialog-btn-sim" type="submit">Sim</button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Modal de confimação de DELETAR SALA FINAL-->
 
     </section>
 
@@ -114,7 +150,7 @@
       </ul>
 
       <div id="lista-salas">
-      <!--Listas de salas-->
+        <!--Listas de salas-->
       </div>
 
     </section>

@@ -491,3 +491,89 @@ li {
   opacity: 1;
 }
 
+/*  Modal de confirmação de cadastro  */
+
+.content-modal-confirm {
+  display: "";
+  /* Ocultar o modal por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo semi-transparente para fundo escuro */
+  transition: all ease-in 200ms;
+}
+
+.modal-confirm {
+  width: 51rem;
+  height: 34.7rem;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-confirm .content-dialog {
+  text-align: center;
+}
+
+.content-dialog .bx {
+  margin-top: 2rem;
+  color: #04AE55;
+  font-size: 8.7rem;
+}
+
+.content-dialog .delete {
+  color: var(--cancel-background);
+}
+
+.content-dialog p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 2.5rem;
+}
+
+.content-dialog-btn {
+  margin-top: 7.5rem;
+}
+
+.content-dialog-btn button {
+  width: 14.5rem;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.dialog-btn-cancelar,
+.dialog-btn-sim {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.dialog-btn-cancelar {
+  background-color: var(--cancel-background);
+  margin-right: .5rem;
+}
+
+.dialog-btn-sim {
+  background-color: #04AE55;
+  margin-left: .5rem;
+}
+
+.dialog-btn-cancelar:hover,
+.dialog-btn-sim:hover {
+  opacity: .8;
+}
+
+.dialog-btn-cancelar:active,
+.dialog-btn-sim:active {
+  opacity: 1;
+}
+
+/* Modal de confirmação de cadastro -- ACIMA  */

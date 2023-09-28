@@ -9,6 +9,10 @@ openModal.onclick = function () {
 closeModalBtn.onclick = function () {
     modal.style.display = "none";
 }
+//openConfirmCad.onclick = function () {
+//  modal.style.display = "block";
+//}
+
 
 const formCadastro = document.querySelector('#cadastro-form');
 const inputIdentificacao = document.querySelector('#indentificacao');
@@ -36,7 +40,7 @@ function cadastrar() {
         })
         .then(function (res) { console.log(res) })
         .catch(function (res) { console.log(res) })
-        window.location.reload()
+    window.location.reload()
 };
 
 function limpar() {
@@ -95,7 +99,7 @@ function criarListaDeSalas(dadosDasSalas) {
                                     
                                     <div class="conteudo-crud">
                                         <button class="button-edt" type="button">EDITAR</button>
-                                        <button class="button-del" type="button">DELETAR</button>
+                                        <button class="button-del" type="button" data-sala-id="${sala.id}">DELETAR</button>
                                     </div>
                                 </ul>`;
         console.log("----------------------");
@@ -104,5 +108,34 @@ function criarListaDeSalas(dadosDasSalas) {
     const listaContent = document.querySelector('#lista-salas');
     listaContent.innerHTML = listaCompleta;
 
+// Obtém todos os botões "DELETAR"
+const buttonsDelete = document.querySelectorAll('.button-del');
 
+// Manipulador de evento para abrir o modal de confirmação
+function openConfirmDelete(event) {
+    const modalConfirmDeletar = document.getElementById('modal-confirm-deletar');
+    const btnCancelar = document.getElementById('btn-cancelar');
+    const btnConfirmar = document.getElementById('btn-confirmar');
+
+    modalConfirmDeletar.style.display = 'block';
+
+    // Configurar o evento "Sim" para a exclusão
+    btnConfirmar.onclick = function () {
+        // Execute a lógica de exclusão aqui
+        // Feche o modal após a exclusão ou se o usuário cancelar
+        modalConfirmDeletar.style.display = 'none';
+    };
+
+    // Configurar o evento "Cancelar"
+    btnCancelar.onclick = function () {
+        modalConfirmDeletar.style.display = 'none';
+    };
 }
+
+// Adicione um manipulador de eventos para cada botão "DELETAR"
+buttonsDelete.forEach(button => {
+    button.addEventListener('click', openConfirmDelete);
+});
+}
+
+
