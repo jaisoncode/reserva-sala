@@ -118,10 +118,11 @@ input[type="password"],
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 2.9rem;
+    transition: background 300ms ease-in;
 }
 
 .btn-lg:hover {
-    opacity: .8;
+    background: linear-gradient(to left, #0258FF, #4BC4EB);
 }
 
 .esqueci-password {
