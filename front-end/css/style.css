@@ -40,12 +40,12 @@ li {
 
 .main-bg-body {
   background-color: var(--body-background);
-  height: 100vh;
+  min-height: 100vh;
   color: black;
 }
 
 .main-content {
-  max-width: 1200px;
+  max-width: 120rem;
   margin: 0 auto;
 }
 
@@ -91,7 +91,7 @@ li {
 }
 
 .nav-superior ul li a:hover {
-  border-bottom: solid 2px var(--white-color);
+  border-bottom: solid .2rem var(--white-color);
   transition: ease-in 300ms;
 }
 
@@ -107,7 +107,7 @@ li {
   margin-left: 0.5rem;
   font-size: 4rem;
 
-  
+
 }
 
 /*INICIO SECTION DE BUSCA*/
@@ -125,7 +125,7 @@ li {
 
 }
 
-.search-content .search-icon{
+.search-content .search-icon {
   position: absolute;
   left: 1.5rem;
   top: 1.7rem;
@@ -136,8 +136,8 @@ li {
 .search {
   height: 6rem;
   width: 47.8rem;
-  border-radius: 30px;
-  border: var(--border-color) 1px solid;
+  border-radius: 3rem;
+  border: var(--border-color) .1rem solid;
   padding-left: 5rem;
 }
 
@@ -148,21 +148,22 @@ li {
 }
 
 .search:focus {
-  background-color: #fff; /* Defina a cor de fundo para cobrir o texto digitado */
+  background-color: #fff;
+  /* Defina a cor de fundo para cobrir o texto digitado */
   font-size: 1.8rem;
   font-weight: 300;
   transition: all ease 100ms;
   outline: none;
-  box-shadow: 0px 1px 4px 1px rgba(0, 0, 0, 0.226);
+  box-shadow: 0 .1rem .4rem .1rem rgba(0, 0, 0, 0.226);
 
 }
 
-.button-add{
+.button-add {
   background-color: var(--header-backgroud);
   color: var(--white-color);
   height: 5.5rem;
-  padding: 0 20PX;
-  border-radius: 20px;
+  padding: 0 2rem;
+  border-radius: 2rem;
   text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
@@ -171,7 +172,7 @@ li {
 }
 
 .button-add i {
-  margin-right: 8px;
+  margin-right: .8rem;
 }
 
 .button-add:hover {
@@ -188,23 +189,23 @@ li {
 
 .titulo-lista-sala {
   width: 100%;
-  margin-left: 40px;
+  margin-left: 4rem;
 }
 
 .lista-sala-cadastrada {
-  padding-left: 30px;
+  padding-left: 3rem;
   width: 100%;
   background-color: var(--white-color);
   margin-top: 1rem;
-  border-left: var(--mark-list) 10px solid;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px 1px rgba(0, 0, 0, 0.226);
+  border-left: var(--mark-list) 1rem solid;
+  border-radius: .5rem;
+  box-shadow: 0 .4rem .4rem .1rem rgba(0, 0, 0, 0.226);
 }
 
 .orientacao-colunas {
   display: grid;
   grid-template-columns: repeat(6, 6fr);
-  gap: 10px;
+  gap: 1rem;
 }
 
 .titulo-identificacao {
@@ -215,7 +216,7 @@ li {
 
 .titulo-descricao {
   width: 28.2rem;
-  margin-left: -50px;
+  margin-left: -5rem;
   text-align: center;
 }
 
@@ -228,13 +229,13 @@ li {
 .titulo-predio {
   text-align: center;
   width: 12.5rem;
-  margin-left: -37px;
+  margin-left: -3.7rem;
 }
 
 .titulo-piso {
   width: 15.5rem;
   text-align: center;
-  margin-left: -95px;
+  margin-left: -9.5rem;
 }
 
 
@@ -248,10 +249,10 @@ li {
   /* Centraliza horizontalmente */
   align-items: center;
   /* Centraliza verticalmente */
-  border-radius: 5px;
+  border-radius: .5rem;
   background-color: var(--item-list-background);
-  margin: 5px 0;
-  height: 59px;
+  margin: .5rem 0;
+  height: 5.9rem;
 
 }
 
@@ -262,7 +263,7 @@ li {
 
 .conteudo-descricao {
   width: 28.2rem;
-  margin-left: -35px;
+  margin-left: -3.5rem;
 }
 
 .conteudo-categoria {
@@ -272,12 +273,12 @@ li {
 
 .conteudo-predio {
   width: 12.5rem;
-  margin-left: -27px;
+  margin-left: -2.7rem;
 }
 
 .conteudo-piso {
   width: 15.5rem;
-  margin-left: -75px;
+  margin-left: -7.5rem;
 }
 
 .conteudo-crud {
@@ -286,10 +287,10 @@ li {
   /* Centraliza horizontalmente */
   align-items: center;
   /* Centraliza verticalmente */
-  margin: 2px 0;
-  height: 59px;
+  margin: .2rem 0;
+  height: 5.9rem;
   width: 27rem;
-  margin-left: -125px;
+  margin-left: -12.5rem;
 }
 
 .button-edt,
@@ -298,16 +299,16 @@ li {
   height: 4rem;
   color: var(--white-color);
   border-radius: 0.5rem;
-  box-shadow: 0px 3px 4px 1px rgba(0, 0, 0, 0.226);
+  box-shadow: 0 .3rem .4rem .1rem rgba(0, 0, 0, 0.226);
   font-weight: 600;
   cursor: pointer;
   border: none;
-  margin-left: 30px;
- 
+  margin-left: 3rem;
+
 }
 
 .button-edt {
- background-color: var(--update-backdgroud);
+  background-color: var(--update-backdgroud);
 
 }
 
@@ -315,15 +316,17 @@ li {
   background-color: var(--cancel-background);
 }
 
-.button-edt:hover, .button-del:hover  {
+.button-edt:hover,
+.button-del:hover {
   transition: all 100ms ease-in;
   opacity: 0.6;
- }
+}
 
- .button-edt:active , .button-del:active  {
+.button-edt:active,
+.button-del:active {
   transition: all 00ms;
   opacity: 1;
- }
+}
 
 .text-container {
   width: 100%;
@@ -334,9 +337,9 @@ li {
   /* Oculta o texto excedente */
   text-overflow: ellipsis;
   /* Exibe "..." quando o texto é ocultado */
-  font-size: 19px;
+  font-size: 1.9rem;
   text-align: center;
-  padding: 0 3px;
+  padding: 0 .3rem;
 }
 
 .titulo-lista-sala li {
@@ -344,14 +347,14 @@ li {
   font-size: 1.6rem;
   font-weight: 600;
   text-transform: uppercase;
-  margin: 1px;
+  margin: .1rem;
 
 }
 
 .conteudo-list {
   list-style: none;
   background-color: var(--item-list-background);
-  border-radius: 5px;
+  border-radius: .5rem;
 
 }
 
@@ -361,30 +364,32 @@ li {
 
 /* Estilos para o modal */
 .modal {
-  display: none; /* Ocultar o modal por padrão */
+  display: none;
+  /* Ocultar o modal por padrão */
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para fundo escuro */
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo semi-transparente para fundo escuro */
   transition: all ease-in 200ms;
 }
 
 /* Estilos para o conteúdo do modal */
 .modal-content {
   background-color: var(--body-background);
-  border-radius: 10px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  border: var(--body-background) .4rem solid;
   position: absolute;
-  height: 44.1rem;
   width: 40rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
 }
-.modal-content i{
+
+.modal-content i {
   position: absolute;
   top: .5rem;
   right: 1rem;
@@ -393,55 +398,61 @@ li {
   cursor: pointer;
 }
 
-.titulo-modal i:hover{
+.titulo-modal i:hover {
   transition: all ease 100ms;
   background-color: #DE1313;
   color: var(--white-color);
 }
 
-.titulo-modal{
-  width: 100%;
+.titulo-modal {
   text-align: center;
 }
 
-.titulo-modal h1{
+.titulo-modal h1 {
   color: var(--header-backgroud);
   text-transform: uppercase;
   font-size: 2.2rem;
   font-weight: 600;
-  
+
 }
+
+.formulario-content {
+  border-radius: 1rem;
+}
+
 #cadastro-form {
   background-color: var(--body-background);
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  
+
 }
 
 #cadastro-form label {
-font-size: 2rem;
-font-weight: 600;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 #cadastro-form input {
   width: 33.7rem;
   height: 4rem;
   border: var(--placeholder-font);
-  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.226);
+  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
   border-radius: .3rem;
   margin-bottom: 1.3rem;
   font-size: 2rem;
   padding: 1rem;
 }
+
 #cadastro-form select {
   width: 33.7rem;
   height: 4rem;
   border: var(--placeholder-font);
-  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.226);
+  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
   border-radius: .3rem;
   margin-bottom: 1.3rem;
-  padding: 1rem;
+  padding-left: 1rem;
+
   font-size: 1.9rem;
   background-color: var(--white-color);
 }
@@ -452,14 +463,14 @@ font-weight: 600;
   color: var(--placeholder-font);
 }
 
-#cadastro-form input:focus{
+#cadastro-form input:focus {
   border: none;
   outline: none;
   font-size: 2rem;
   font-weight: 300;
 }
 
-#cadastro-form button{
+#cadastro-form button {
   border: none;
   border-radius: .3rem;
   font-size: 2.4rem;
@@ -469,7 +480,7 @@ font-weight: 600;
   color: var(--white-color);
   background-color: var(--header-backgroud);
   cursor: pointer;
-  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.226);
+  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
 }
 
 #cadastro-form button:hover {
@@ -479,4 +490,4 @@ font-weight: 600;
 #cadastro-form button:active {
   opacity: 1;
 }
-/* Estilos para o botão de fechamento */
+
