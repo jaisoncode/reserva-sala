@@ -199,7 +199,7 @@ li {
   margin-top: 1rem;
   border-left: var(--mark-list) 1rem solid;
   border-radius: .5rem;
-  box-shadow: 0 .4rem .4rem .1rem rgba(0, 0, 0, 0.226);
+  box-shadow: .2rem .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
 }
 
 .orientacao-colunas {

@@ -1,0 +1,123 @@
+:root {
+
+    --header-backgroud: #0258FF;
+    --body-background: #F2F3F8;
+    --white-color: #FFFFFF;
+    --update-backdgroud: #E7D000;
+    --cancel-background: #E02424;
+    --mark-list: #DAE7FF;
+    --item-list-background: #EEEEEE;
+    --placeholder-font: #CAC8C8;
+    --border-color: #CFC7C7;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    background: linear-gradient(to bottom, #e7ecf0, #adc7e2);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Faz com que o conteúdo ocupe toda a altura da tela */
+}
+
+.container {
+    background: linear-gradient(50deg, #0258FF, #4BC4EB);
+    width: 94.4rem;
+    height: 53.8rem;
+    padding: 8rem;
+    border-radius: 3rem;
+}
+
+#logo, .container h2 , .container h3 {
+    color: var(--white-color);
+    font-weight: 900;
+}
+
+#logo {
+    font-size: 5rem;
+    text-transform: uppercase;
+}
+
+.container h2 {
+    font-size: 2.4rem;
+    padding: 2rem 0;
+}
+
+.container h3 {
+    font-size: 1.6rem;
+    font-style: italic;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+
+
+input[type="text"],
+input[type="password"], .btn-lg {
+    font-size: 1.6rem;
+    font-weight: 500;
+    width: 42.3rem;
+    height: 5rem;
+    padding-left: 10px;
+    border-radius: .5rem;
+    padding-left: 30px;
+    box-shadow: .2rem .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
+    border: none;
+    
+}
+
+#username, #password:focus {
+    outline: none;
+}
+
+#username, #password::placeholder {
+    font-size: 1.6rem;
+    color: #CAC8C8;
+}
+
+
+.input-icon {
+    position: relative;
+}
+
+.input-icon i {
+    position: absolute;
+    top: 22px;
+    left: 10px;
+    color: #879196;
+}
+
+.btn-lg {
+    background-color: var(--header-backgroud);
+    color: var(--white-color);
+    margin-top: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 800;
+    
+
+}
+
+.btn-lg:hover {
+    background-color: #4BC4EB;
+}
+
