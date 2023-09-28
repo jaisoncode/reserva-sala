@@ -9,7 +9,7 @@
     --item-list-background: #EEEEEE;
     --placeholder-font: #CAC8C8;
     --border-color: #CFC7C7;
-  }
+}
 
 * {
     margin: 0;
@@ -26,7 +26,8 @@ html {
 
 
 body {
-    background: linear-gradient(to bottom, #e7ecf0, #adc7e2);
+    background-color: var(--body-background);
+    /*background: linear-gradient(to bottom, #e7ecf0, #adc7e2);*/
     text-align: center;
     display: flex;
     align-items: center;
@@ -39,23 +40,27 @@ body {
     background: linear-gradient(50deg, #0258FF, #4BC4EB);
     width: 94.4rem;
     height: 53.8rem;
-    padding: 8rem;
+    padding: 4rem 8rem;
     border-radius: 3rem;
 }
 
-#logo, .container h2 , .container h3 {
+#logo,
+.container h2,
+.container h3 {
     color: var(--white-color);
     font-weight: 900;
+    padding-bottom: 1rem;
 }
 
 #logo {
     font-size: 5rem;
     text-transform: uppercase;
+    padding-bottom: 4rem;
 }
 
 .container h2 {
     font-size: 2.4rem;
-    padding: 2rem 0;
+    padding-bottom: 2rem;
 }
 
 .container h3 {
@@ -63,61 +68,69 @@ body {
     font-style: italic;
     font-weight: 400;
     padding-bottom: 2rem;
+
 }
 
-
-
 input[type="text"],
-input[type="password"], .btn-lg {
+input[type="password"],
+.btn-lg {
     font-size: 1.6rem;
     font-weight: 500;
     width: 42.3rem;
     height: 5rem;
-    padding-left: 10px;
     border-radius: .5rem;
-    padding-left: 30px;
+    padding-left: 6rem;
     box-shadow: .2rem .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
+    color: #6D6D6D;
     border: none;
-    
+    margin-bottom: 1.9rem;
 }
 
-#username, #password:focus {
+
+.bx {
+    color: var(--placeholder-font);
+    position: absolute;
+    padding-top: 1.3rem;
+    padding-left: 2rem;
+    font-size: 2.3rem;
+}
+
+#username,
+#password:focus {
     outline: none;
 }
 
-#username, #password::placeholder {
+#username::placeholder,
+#password::placeholder {
     font-size: 1.6rem;
     color: #CAC8C8;
-}
-
-
-.input-icon {
-    position: relative;
-}
-
-.input-icon i {
-    position: absolute;
-    top: 22px;
-    left: 10px;
-    color: #879196;
 }
 
 .btn-lg {
     background-color: var(--header-backgroud);
     color: var(--white-color);
-    margin-top: 2rem;
-    padding: 10px;
+    padding: .1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: .5rem;
     cursor: pointer;
     font-size: 1.6rem;
     text-transform: uppercase;
     font-weight: 800;
-    
-
+    margin-bottom: 4rem;
 }
 
 .btn-lg:hover {
-    background-color: #4BC4EB;
+    opacity: .8;
 }
 
+.esqueci-password {
+    color: var(--white-color);
+    font-size: 1.4rem;
+    font-weight: 400;
+    cursor: pointer;
+    margin-top: 8rem;
+}
+
+.esqueci-password:hover {
+    text-decoration: underline;
+}
