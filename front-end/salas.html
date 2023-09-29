@@ -78,7 +78,7 @@
             <input type="text" id="piso" name="piso" placeholder="Ex: Térreo" required>
 
             <button class="finalzar-btn" type="submit">Finalizar</button>
-            
+
           </form>
 
 
@@ -89,17 +89,17 @@
       <!-- Modal de confimação de cadastro INICIO-->
       <div id="modal-confirm-cadastro" class="content-modal-confirm" style="display: none;"">
 
-        <div class="modal-confirm">
-          <div class="content-dialog">
-            <i class='bx bx-message-rounded-check'></i>
-            <p>Essa ação irá adicionar uma sala na lista! Tem certeza?</p>
-            <div class="content-dialog-btn">
-              <button class="dialog-btn-cancelar" type="submit">Cancelar</button>
-              <button class="dialog-btn-sim" type="submit">Sim</button>
-            </div>
+        <div class=" modal-confirm">
+        <div class="content-dialog">
+          <i class='bx bx-message-rounded-check'></i>
+          <p>Essa ação irá adicionar uma sala na lista! Tem certeza?</p>
+          <div class="content-dialog-btn">
+            <button id="button-cancela-cad" class="dialog-btn-cancelar" type="submit">Cancelar</button>
+            <button id="button-confirm-cad" class="dialog-btn-sim" type="submit">Sim</button>
           </div>
-
         </div>
+
+      </div>
 
       </div>
       <!-- Modal de confimação de cadastro FINAL-->
@@ -113,7 +113,7 @@
             <p>Essa ação irá apagar uma sala na lista! Tem certeza?</p>
             <div class="content-dialog-btn">
               <button class="dialog-btn-cancelar" type="submit">Cancelar</button>
-              <button class="dialog-btn-sim" type="submit">Sim</button>
+              <button class="dialog-btn-sim">Sim</button>
             </div>
           </div>
 

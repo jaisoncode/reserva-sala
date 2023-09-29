@@ -5,6 +5,9 @@ import com.example.reserva.sala.SalaRepository;
 import com.example.reserva.sala.SalaRequestDTO;
 import com.example.reserva.sala.SalaResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,17 +15,17 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("sala")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class SalaController {
     @Autowired
     private SalaRepository repository;
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
+
     @PostMapping
-    public void saveSala(@RequestBody SalaRequestDTO novaSala) {
+    public Sala saveSala(@RequestBody SalaRequestDTO novaSala) {
         Sala newSala = new Sala(novaSala);
-        repository.save(newSala);
-        return;
+        return repository.save(newSala);
+
     }
-    @CrossOrigin(origins = "*", allowedHeaders = "*")
     @GetMapping
     public List<SalaResponseDTO> getAll(){
 

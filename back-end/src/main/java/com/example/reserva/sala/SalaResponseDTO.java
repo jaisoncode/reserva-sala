@@ -7,5 +7,4 @@ public record SalaResponseDTO(Integer id, String identificacao, String descricao
             sala.getCategoria(), sala.getPredio(), sala.getPiso());
     }
 
-
 }

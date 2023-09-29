@@ -9,10 +9,6 @@ openModal.onclick = function () {
 closeModalBtn.onclick = function () {
     modal.style.display = "none";
 }
-//openConfirmCad.onclick = function () {
-//  modal.style.display = "block";
-//}
-
 
 const formCadastro = document.querySelector('#cadastro-form');
 const inputIdentificacao = document.querySelector('#indentificacao');
@@ -26,7 +22,6 @@ function cadastrar() {
     fetch("http://localhost:8080/sala",
         {
             headers: {
-                'Accept': 'applicarion/json',
                 'Content-Type': 'application/json'
             },
             method: "POST",
@@ -38,9 +33,14 @@ function cadastrar() {
                 piso: inputPiso.value
             })
         })
-        .then(function (res) { console.log(res) })
-        .catch(function (res) { console.log(res) })
-    window.location.reload()
+        .then( response => {
+            return response.json();
+        })
+        .then( response =>  {
+            buscarDadosDasSalas(response);
+        })
+        .catch(function (response) { console.log(response) })
+
 };
 
 function limpar() {
@@ -51,17 +51,42 @@ function limpar() {
     inputPiso.value = "";
 }
 
+const confirmeCadastro = document.querySelector('#modal-confirm-cadastro');
+let confirma = false;
+const simBtn = document.querySelector('#button-confirm-cad');
+const cancelaBtn = document.querySelector('#button-cancela-cad');
+
+
+finalizarBtn.onclick = function() {
+    confirmeCadastro.style.display = "block"  
+}
+
+simBtn.onclick = function() {
+    confirma = true;
+    confirmeCadastro.style.display = "none";
+
+    if (confirma) {
+        cadastrar();
+        limpar();
+    }  
+};
+
+cancelaBtn.onclick = function() {
+    confirma = false;
+    confirmeCadastro.style.display = "none";
+};
+
 formCadastro.addEventListener('submit', function (event) {
     event.preventDefault();
-    cadastrar();
-    limpar();
 });
 
 function buscarDadosDasSalas() {
     fetch('http://localhost:8080/sala')
-        .then(response => response.json())
-        .then(dadosDasSalas => {
-            criarListaDeSalas(dadosDasSalas);
+        .then(response => response.json()
+        )
+        .then(data => {
+          //  arraySalas.push(data);
+            criarListaDeSalas(data);
         })
         .catch(error => {
             console.error('Erro ao buscar os dados das salas:', error);
@@ -72,9 +97,9 @@ document.addEventListener('DOMContentLoaded', function () {
     buscarDadosDasSalas();
 });
 
-function criarListaDeSalas(dadosDasSalas) {
+function criarListaDeSalas(data) {
     let listaCompleta = '';
-    dadosDasSalas.forEach(sala => {
+    data.forEach(sala => {
 
         listaCompleta += `<ul class="lista-sala-cadastrada orientacao-colunas"> 
                                     <div class="conteudo-identificacao">
@@ -99,43 +124,12 @@ function criarListaDeSalas(dadosDasSalas) {
                                     
                                     <div class="conteudo-crud">
                                         <button class="button-edt" type="button">EDITAR</button>
-                                        <button class="button-del" type="button" data-sala-id="${sala.id}">DELETAR</button>
+                                        <button class="button-del" type="button"  id="${sala.id}">DELETAR</button>
                                     </div>
                                 </ul>`;
-        console.log("----------------------");
+
     });
 
     const listaContent = document.querySelector('#lista-salas');
     listaContent.innerHTML = listaCompleta;
-
-// Obtém todos os botões "DELETAR"
-const buttonsDelete = document.querySelectorAll('.button-del');
-
-// Manipulador de evento para abrir o modal de confirmação
-function openConfirmDelete(event) {
-    const modalConfirmDeletar = document.getElementById('modal-confirm-deletar');
-    const btnCancelar = document.getElementById('btn-cancelar');
-    const btnConfirmar = document.getElementById('btn-confirmar');
-
-    modalConfirmDeletar.style.display = 'block';
-
-    // Configurar o evento "Sim" para a exclusão
-    btnConfirmar.onclick = function () {
-        // Execute a lógica de exclusão aqui
-        // Feche o modal após a exclusão ou se o usuário cancelar
-        modalConfirmDeletar.style.display = 'none';
-    };
-
-    // Configurar o evento "Cancelar"
-    btnCancelar.onclick = function () {
-        modalConfirmDeletar.style.display = 'none';
-    };
 }
-
-// Adicione um manipulador de eventos para cada botão "DELETAR"
-buttonsDelete.forEach(button => {
-    button.addEventListener('click', openConfirmDelete);
-});
-}
-
-
