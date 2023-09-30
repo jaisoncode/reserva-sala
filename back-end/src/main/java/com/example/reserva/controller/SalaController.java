@@ -5,6 +5,7 @@ import com.example.reserva.sala.SalaRepository;
 import com.example.reserva.sala.SalaRequestDTO;
 import com.example.reserva.sala.SalaResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,4 +38,18 @@ public class SalaController {
         return salaList;
 
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteSala(@PathVariable int id) {
+        try {
+            repository.deleteById(id);
+            return new ResponseEntity<>("Sala excluída com sucesso", HttpStatus.OK);
+        } catch (EmptyResultDataAccessException e) {
+            return new ResponseEntity<>("Sala não encontrada", HttpStatus.NOT_FOUND);
+        } catch (Exception e) {
+            return new ResponseEntity<>("Ocorreu um erro ao excluir a sala", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
 }
