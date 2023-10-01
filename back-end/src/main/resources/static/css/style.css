@@ -1,0 +1,579 @@
+:root {
+
+  --header-backgroud: #0258FF;
+  --body-background: #F2F3F8;
+  --white-color: #FFFFFF;
+  --update-backdgroud: #E7D000;
+  --cancel-background: #E02424;
+  --mark-list: #DAE7FF;
+  --item-list-background: #EEEEEE;
+  --placeholder-font: #CAC8C8;
+  --border-color: #CFC7C7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+}
+
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+
+}
+
+.main-bg-header {
+  background-color: var(--header-backgroud);
+  color: var(--white-color);
+}
+
+.main-bg-body {
+  background-color: var(--body-background);
+  min-height: 100vh;
+  color: black;
+}
+
+.main-content {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7rem;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  font-size: 4rem;
+  font-weight: 900;
+}
+
+.nav-superior ul li {
+  margin: 0 2rem;
+  list-style: none;
+  /* Remover os marcadores padrão de lista */
+  display: inline;
+  /* Exibir os itens em linha */
+  /* Tamanho de fonte */
+  color: var(--white-color);
+  /* Cor do texto */
+}
+
+.nav-superior ul li a {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+/* Estilize os links dentro das <li> */
+.nav-superior ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+  /* Efeito de transição de cor ao passar o mouse */
+}
+
+.nav-superior ul li a:hover {
+  border-bottom: solid .2rem var(--white-color);
+  transition: ease-in 300ms;
+}
+
+.area-perfil {
+  font-size: 2.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.area-perfil i {
+  margin-left: 0.5rem;
+  font-size: 4rem;
+
+
+}
+
+/*INICIO SECTION DE BUSCA*/
+
+.section-search {
+  display: flex;
+  display: flex;
+  padding: 3rem;
+  margin: auto;
+  justify-content: center;
+}
+
+.search-content {
+  position: relative;
+
+}
+
+.search-content .search-icon {
+  position: absolute;
+  left: 1.5rem;
+  top: 1.7rem;
+  font-size: 3rem;
+
+}
+
+.search {
+  height: 6rem;
+  width: 47.8rem;
+  border-radius: 3rem;
+  border: var(--border-color) .1rem solid;
+  padding-left: 5rem;
+}
+
+.search::placeholder {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--placeholder-font);
+}
+
+.search:focus {
+  background-color: #fff;
+  /* Defina a cor de fundo para cobrir o texto digitado */
+  font-size: 1.8rem;
+  font-weight: 300;
+  transition: all ease 100ms;
+  outline: none;
+  box-shadow: 0 .1rem .4rem .1rem rgba(0, 0, 0, 0.226);
+
+}
+
+.button-add {
+  background-color: var(--header-backgroud);
+  color: var(--white-color);
+  height: 5.5rem;
+  padding: 0 2rem;
+  border-radius: 2rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.button-add i {
+  margin-right: .8rem;
+}
+
+.button-add:hover {
+  opacity: 0.6;
+}
+
+.button-add:active {
+  opacity: 1;
+}
+
+/*FINAL SECTION DE BUSCA*/
+
+/* estilização da lista de salas -- INICIO*/
+
+.titulo-lista-sala {
+  width: 100%;
+  margin-left: 4rem;
+}
+
+.lista-sala-cadastrada {
+  padding-left: 3rem;
+  width: 100%;
+  background-color: var(--white-color);
+  margin-top: 1rem;
+  border-left: var(--mark-list) 1rem solid;
+  border-radius: .5rem;
+  box-shadow: .2rem .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
+}
+
+.orientacao-colunas {
+  display: grid;
+  grid-template-columns: repeat(6, 6fr);
+  gap: 1rem;
+}
+
+.titulo-identificacao {
+  text-align: center;
+  width: 13.7rem;
+
+}
+
+.titulo-descricao {
+  width: 28.2rem;
+  margin-left: -5rem;
+  text-align: center;
+}
+
+.titulo-categoria {
+  text-align: center;
+  width: 14.8rem;
+
+}
+
+.titulo-predio {
+  text-align: center;
+  width: 12.5rem;
+  margin-left: -3.7rem;
+}
+
+.titulo-piso {
+  width: 15.5rem;
+  text-align: center;
+  margin-left: -9.5rem;
+}
+
+
+.conteudo-identificacao,
+.conteudo-descricao,
+.conteudo-categoria,
+.conteudo-predio,
+.conteudo-piso {
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  border-radius: .5rem;
+  background-color: var(--item-list-background);
+  margin: .5rem 0;
+  height: 5.9rem;
+
+}
+
+
+.conteudo-identificacao {
+  width: 13.7rem;
+}
+
+.conteudo-descricao {
+  width: 28.2rem;
+  margin-left: -3.5rem;
+}
+
+.conteudo-categoria {
+  width: 14.8rem;
+  text-align: center;
+}
+
+.conteudo-predio {
+  width: 12.5rem;
+  margin-left: -2.7rem;
+}
+
+.conteudo-piso {
+  width: 15.5rem;
+  margin-left: -7.5rem;
+}
+
+.conteudo-crud {
+  display: flex;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  margin: .2rem 0;
+  height: 5.9rem;
+  width: 27rem;
+  margin-left: -12.5rem;
+}
+
+.button-edt,
+.button-del {
+  width: 10rem;
+  height: 4rem;
+  color: var(--white-color);
+  border-radius: 0.5rem;
+  box-shadow: 0 .3rem .4rem .1rem rgba(0, 0, 0, 0.226);
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  margin-left: 3rem;
+
+}
+
+.button-edt {
+  background-color: var(--update-backdgroud);
+
+}
+
+.button-del {
+  background-color: var(--cancel-background);
+}
+
+.button-edt:hover,
+.button-del:hover {
+  transition: all 100ms ease-in;
+  opacity: 0.6;
+}
+
+.button-edt:active,
+.button-del:active {
+  transition: all 00ms;
+  opacity: 1;
+}
+
+.text-container {
+  width: 100%;
+  /* Largura da div */
+  white-space: nowrap;
+  /* Impede a quebra de texto */
+  overflow: hidden;
+  /* Oculta o texto excedente */
+  text-overflow: ellipsis;
+  /* Exibe "..." quando o texto é ocultado */
+  font-size: 1.9rem;
+  text-align: center;
+  padding: 0 .3rem;
+}
+
+.titulo-lista-sala li {
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: .1rem;
+
+}
+
+.conteudo-list {
+  list-style: none;
+  background-color: var(--item-list-background);
+  border-radius: .5rem;
+
+}
+
+/* FINAL LISTA DE SALAS*/
+
+/*MODAL INICIIOOO*/
+
+/* Estilos para o modal */
+.modal {
+  display: none;
+  /* Ocultar o modal por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo semi-transparente para fundo escuro */
+  transition: all ease-in 200ms;
+}
+
+/* Estilos para o conteúdo do modal */
+.modal-content {
+  background-color: var(--body-background);
+  border-radius: 1rem;
+  border: var(--body-background) .4rem solid;
+  position: absolute;
+  width: 40rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.modal-content i {
+  position: absolute;
+  top: .5rem;
+  right: 1rem;
+  font-size: 3rem;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.titulo-modal i:hover {
+  transition: all ease 100ms;
+  background-color: #DE1313;
+  color: var(--white-color);
+}
+
+.titulo-modal {
+  text-align: center;
+}
+
+.titulo-modal h1 {
+  color: var(--header-backgroud);
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  font-weight: 600;
+
+}
+
+.formulario-content {
+  border-radius: 1rem;
+}
+
+#cadastro-form {
+  background-color: var(--body-background);
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+
+}
+
+#cadastro-form label {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#cadastro-form input {
+  width: 33.7rem;
+  height: 4rem;
+  border: var(--placeholder-font);
+  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
+  border-radius: .3rem;
+  margin-bottom: 1.3rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+#cadastro-form select {
+  width: 33.7rem;
+  height: 4rem;
+  border: var(--placeholder-font);
+  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
+  border-radius: .3rem;
+  margin-bottom: 1.3rem;
+  padding-left: 1rem;
+
+  font-size: 1.9rem;
+  background-color: var(--white-color);
+}
+
+#cadastro-form input::placeholder {
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--placeholder-font);
+}
+
+#cadastro-form input:focus {
+  border: none;
+  outline: none;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+#cadastro-form button {
+  border: none;
+  border-radius: .3rem;
+  font-size: 2.4rem;
+  font-weight: 500;
+  width: 33.7rem;
+  height: 4rem;
+  color: var(--white-color);
+  background-color: var(--header-backgroud);
+  cursor: pointer;
+  box-shadow: 0 .2rem .4rem .1rem rgba(0, 0, 0, 0.226);
+}
+
+#cadastro-form button:hover {
+  opacity: 0.6;
+}
+
+#cadastro-form button:active {
+  opacity: 1;
+}
+
+/*  Modal de confirmação de cadastro  */
+
+.content-modal-confirm {
+  display: "";
+  /* Ocultar o modal por padrão */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Fundo semi-transparente para fundo escuro */
+  transition: all ease-in 200ms;
+}
+
+.modal-confirm {
+  width: 51rem;
+  height: 34.7rem;
+  background-color: var(--white-color);
+  border-radius: 2rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal-confirm .content-dialog {
+  text-align: center;
+}
+
+.content-dialog .bx {
+  margin-top: 2rem;
+  color: #04AE55;
+  font-size: 8.7rem;
+}
+
+.content-dialog .delete {
+  color: var(--cancel-background);
+}
+
+.content-dialog p {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 2.5rem;
+}
+
+.content-dialog-btn {
+  margin-top: 7.5rem;
+}
+
+.content-dialog-btn button {
+  width: 14.5rem;
+  height: 4rem;
+  border: none;
+  border-radius: 1rem;
+}
+
+.dialog-btn-cancelar,
+.dialog-btn-sim {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+.dialog-btn-cancelar {
+  background-color: var(--cancel-background);
+  margin-right: .5rem;
+}
+
+.dialog-btn-sim {
+  background-color: #04AE55;
+  margin-left: .5rem;
+}
+
+.dialog-btn-cancelar:hover,
+.dialog-btn-sim:hover {
+  opacity: .8;
+}
+
+.dialog-btn-cancelar:active,
+.dialog-btn-sim:active {
+  opacity: 1;
+}
+
+/* Modal de confirmação de cadastro --- ACIMA  */

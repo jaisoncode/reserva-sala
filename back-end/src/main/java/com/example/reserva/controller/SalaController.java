@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("sala")
+@RequestMapping("/sala")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class SalaController {
     @Autowired

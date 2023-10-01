@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+
+
+    <link rel="stylesheet" type="text/css" href="/css/login.css"> 
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    
+
+    
+
+    <div class="container">
+        <div th:if="${param.error}">
+            Senha ou usuário inválido.
+        </div>
+        <div th:if="${param.logout}">
+            Você foi deslogado.
+        </div>
+        
+        <h1 id="logo">Logo</h1>
+        <h2>Bem-vindo(a)!</h2>
+        <h3>Seu gerenciador de salas favorito!</h3>
+        <form id="loginForm" th:action="@{/login}" method="post">
+            <div class="input-icon">
+                <i class='bx bx-envelope'></i>
+                <input type="text" id="username" name="username" placeholder="Usuário" required>
+            </div>
+            <div class="input-icon">
+                <i class='bx bx-lock'></i>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+            </div>
+            <div>
+                <button class="btn-lg" type="submit">Entrar</button>
+            </div>
+            <a class="esqueci-password" href="/usuarios/cadastro">Novo Usuário</a>
+        </form>
+    </div>
+
+    
+    </body>
+
+</html>
