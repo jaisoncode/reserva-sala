@@ -1,13 +1,13 @@
 package com.example.reserva.service;
 
-import com.example.reserva.model.usuario.UserDetail;
-import com.example.reserva.model.usuario.Usuario;
+import com.example.reserva.usuario.UserDetail;
+import com.example.reserva.usuario.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
-import com.example.reserva.model.usuario.UsuarioRepository;
+import com.example.reserva.usuario.UsuarioRepository;
 
 public class UsuarioDetailsServiceImpl implements UserDetailsService {
     @Autowired

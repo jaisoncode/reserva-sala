@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.example.reserva.model.usuario.NovoUsuarioDados;
-import com.example.reserva.model.usuario.Usuario;
-import com.example.reserva.model.usuario.UsuarioRepository;
+import com.example.reserva.usuario.NovoUsuarioDados;
+import com.example.reserva.usuario.Usuario;
+import com.example.reserva.usuario.UsuarioRepository;
 
 import jakarta.transaction.Transactional;
 
